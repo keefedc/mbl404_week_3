@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">mbl404_dck_week_3</string>
+    <string name="app_name">Football Scores</string>
+    <string name="label_team_one_text">Team One:</string>
+    <string name="label_team_two_text">Team Two:</string>
+
+    <string-array name="nfl_teams">
+        <item>Select a Team:</item>
+        <item>Cardinals</item>
+        <item>Bears</item>
+        <item>Packers</item>
+        <item>Giants</item>
+    </string-array>
+
 </resources>
