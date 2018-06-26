@@ -139,8 +139,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void teamComp(Team teamOne, String teamTwo) {
+
+        String def = teamTwo;
         for (int i = 0; i < teamOne.getGames().size(); i++) {
-            if (teamOne.getGames().get(i).getOpFor().compareTo(teamTwo) == 0) {
+            String opFor = teamOne.getGames().get(i).getOpFor();
+            if (opFor.compareTo(def) == 0) {
                 String text = teamOne.getName() + " vs. " + teamOne.getGames().get(i).getOpFor() +
                         "\nQ1:  " + getFQ(teamOne,i) +
                         "\nQ2:  " + getSQ(teamOne,i) +
@@ -148,11 +151,10 @@ public class MainActivity extends AppCompatActivity {
                         "\nQ4 (Final):  " + finalScore(teamOne, i);
                 resultsDisplay.setText(text);
                 return;
-            } else {
-                resultsDisplay.setText("These teams did not play eachother!");
-                return;
             }
         }
+        resultsDisplay.setText("These teams did not play eachother!");
+        return;
     }
 
     public String finalScore(Team teamOne, int pos){
